@@ -1,4 +1,5 @@
 gsap.registerPlugin(ScrollTrigger);
+
 gsap.from(".ui-img", {
     opacity: 0,
     y: 60,
@@ -9,6 +10,7 @@ gsap.from(".ui-img", {
         start: "top 75%"
     }
 });
+
 document.addEventListener("scroll", () => {
     const header = document.querySelector(".header");
 
@@ -25,7 +27,6 @@ gsap.to(".logo", {
     duration: 1.2,
     ease: "power4.out"
 });
-
 
 gsap.to(".hero-title", {
     opacity: 1,
