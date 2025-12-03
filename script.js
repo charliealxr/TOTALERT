@@ -9,6 +9,13 @@ gsap.from(".ui-img", {
         start: "top 75%"
     }
 });
+gsap.to(".logo", {
+    opacity: 1,
+    y: 0,
+    duration: 1.2,
+    ease: "power4.out"
+});
+
 
 gsap.to(".hero-title", {
     opacity: 1,
