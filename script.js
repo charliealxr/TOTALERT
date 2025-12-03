@@ -9,6 +9,16 @@ gsap.from(".ui-img", {
         start: "top 75%"
     }
 });
+document.addEventListener("scroll", () => {
+    const header = document.querySelector(".header");
+
+    if (window.scrollY > 80) {
+        header.classList.add("shrink");
+    } else {
+        header.classList.remove("shrink");
+    }
+});
+
 gsap.to(".logo", {
     opacity: 1,
     y: 0,
