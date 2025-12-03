@@ -57,60 +57,50 @@ body {
 }
 
 /* HERO SECTION */
-.hero {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: white;
-    text-align: center;
-    padding: 20px;
-}
-
-/* --- HERO CON VIDEO DE FONDO PROFESIONAL --- */
+/* HERO CON VIDEO A PANTALLA COMPLETA */
 .hero {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 100vh; /* pantalla completa */
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* Video de fondo */
+/* VIDEO FULLSCREEN */
 .hero-video {
     position: absolute;
     top: 50%;
     left: 50%;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover;      /* cubre toda la pantalla */
     transform: translate(-50%, -50%);
     z-index: -2;
-    filter: brightness(0.45); /* hace que predomine el negro */
+    filter: brightness(0.40); /* oscurece para que el texto blanco se vea */
 }
 
-/* Overlay para mejorar lectura del texto */
+/* CAPA OSCURA (para más legibilidad) */
 .hero-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.45); /* oscuro pero elegante */
+    background: rgba(0,0,0,0.35);
     z-index: -1;
 }
 
-/* Contenido */
+/* CONTENIDO DEL TEXTO */
 .hero-content {
     position: relative;
-    z-index: 10;
     text-align: center;
-    color: white;
+    color: white;  /* texto blanco */
+    z-index: 10;
 }
 
+/* ANIMACIONES ENTRAN CON OPACIDAD 0 */
 .hero-title {
     font-size: 4rem;
     font-weight: 700;
@@ -120,9 +110,20 @@ body {
 
 .hero-subtitle {
     font-size: 1.4rem;
-    margin-top: 12px;
+    margin-top: 15px;
     opacity: 0;
 }
+
+/* PARA CELULAR */
+@media (max-width: 600px) {
+    .hero-title {
+        font-size: 2.8rem;
+    }
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+}
+
 
 /* SECTIONS */
 .section {
