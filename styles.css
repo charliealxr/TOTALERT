@@ -7,18 +7,27 @@ body {
 }
 
 /* HEADER (logo arriba) */
+/* --- LOGO estilo Apple (se hace pequeño al hacer scroll) --- */
+
 .header {
     position: fixed;
     top: 20px;
     left: 40px;
     z-index: 1000;
+    transition: transform 0.4s ease, opacity 0.4s ease;
 }
 
 .logo {
-    height: 400px;
-    opacity: 1;               /* visible (sin animación por ahora) */
-    transform: none;          /* no lo escondemos */
+    height: 220px; /* tamaño inicial grande */
+    transition: transform 0.5s ease, height 0.5s ease;
 }
+
+/* Tamaño del logo cuando se hace scroll */
+.header.shrink .logo {
+    height: 90px; /* tamaño pequeño estilo Apple */
+    transform: translateY(-10px);
+}
+
 
 /* HERO SECTION */
 .hero {
