@@ -21,22 +21,24 @@ document.addEventListener("scroll", () => {
     }
 });
 // Animación del logo de inicio estilo Apple
+// ANIMACIÓN DEL LOGO INICIAL
 gsap.to(".logo-intro-img", {
     opacity: 1,
     scale: 1,
-    duration: 1.5,
+    duration: 1.4,
     ease: "power4.out"
 });
 
-// Espera 1.6s y luego esconde la pantalla
 gsap.to(".logo-intro", {
     opacity: 0,
-    delay: 1.6,
+    delay: 2,
     duration: 1.2,
+    ease: "power2.out",
     onComplete: () => {
         document.querySelector(".logo-intro").classList.add("hidden");
     }
 });
+
 
 gsap.to(".logo", {
     opacity: 1,
