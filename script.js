@@ -50,15 +50,15 @@ gsap.to(".logo", {
 gsap.to(".hero-title", {
     opacity: 1,
     y: -20,
-    duration: 1.4,
+    duration: 1.5,
     ease: "power4.out"
 });
 
 gsap.to(".hero-subtitle", {
     opacity: 1,
     y: -10,
-    duration: 1.6,
-    delay: 0.3,
+    duration: 1.8,
+    delay: 0.2,
     ease: "power4.out"
 });
 
