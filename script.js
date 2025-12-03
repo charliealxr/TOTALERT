@@ -1,4 +1,14 @@
 gsap.registerPlugin(ScrollTrigger);
+gsap.from(".ui-img", {
+    opacity: 0,
+    y: 60,
+    duration: 1.2,
+    stagger: 0.2,
+    scrollTrigger: {
+        trigger: ".ui-gallery",
+        start: "top 75%"
+    }
+});
 
 gsap.to(".hero-title", {
     opacity: 1,
