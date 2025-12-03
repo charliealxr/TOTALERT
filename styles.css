@@ -15,7 +15,7 @@ body {
 }
 
 .logo {
-    height: 100px;
+    height: 400px;
     opacity: 1;               /* visible (sin animación por ahora) */
     transform: none;          /* no lo escondemos */
 }
